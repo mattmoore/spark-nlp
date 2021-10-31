@@ -1,10 +1,2 @@
-docs/_data/navigation.yml
-docs/assets/images/ocr/signature.png
-docs/en/ocr.md
-docs/en/ocr_object_detection.md
-docs/en/ocr_release_notes.md
-docs/_data/navigation.yml
-docs/assets/images/ocr/signature.png
-docs/en/ocr.md
-docs/en/ocr_object_detection.md
-docs/en/ocr_release_notes.md
+docs/en/licensed_install.md
+docs/en/licensed_install.md
