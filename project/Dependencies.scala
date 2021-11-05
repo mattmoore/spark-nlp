@@ -6,6 +6,7 @@ object Dependencies {
   val spark23Ver = "2.3.4"
   val spark24Ver = "2.4.7"
   val spark30Ver = "3.0.2"
+  val spark32Ver = "3.2.0"
 
   val is_gpu: String = System.getProperty("is_gpu", "false")
   val is_opt: String = System.getProperty("is_opt", "false")
@@ -34,10 +35,11 @@ object Dependencies {
   }
 
   def getSparkVersion(is_spark23: String, is_spark24: String): String = {
-    if(is_spark24 == "true") spark24Ver
-    else
-      if(is_spark23=="true") spark23Ver
-      else spark30Ver
+//    if(is_spark24 == "true") spark24Ver
+//    else
+//      if(is_spark23=="true") spark23Ver
+//      else spark30Ver
+    spark32Ver
   }
 
   def getJavaTarget(is_spark23: String, is_spark24: String): String = {
@@ -49,11 +51,10 @@ object Dependencies {
   }
 
   /** ------- Scala version start ------- */
-  lazy val scala211 = "2.11.12"
-  lazy val scala212 = "2.12.10"
-  lazy val scalaVer: String = if(is_spark23 == "true" | is_spark24 == "true") scala211 else scala212
+  lazy val scala213 = "2.13.6"
+  lazy val scalaVer: String = scala213
 
-  lazy val supportedScalaVersions = List(scala212, scala211)
+  lazy val supportedScalaVersions = List(scala213)
 
   val scalaTestVersion = "3.2.9"
   /** ------- Scala version end ------- */
